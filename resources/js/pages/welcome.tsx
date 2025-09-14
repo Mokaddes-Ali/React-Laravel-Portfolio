@@ -3,10 +3,8 @@ import { type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
 import Header from '../components/fontend/Header';
 import Portfolio from '../components/fontend/Portfolio'
-import Contact from '../components/fontend/Contact'
 import FollowMe from '../components/fontend/FollowMe'
 import UpButton from '../components/fontend/UpButton'
-import Testimonial from '../components/fontend/Testimonial'
 import Working from '../components/fontend/Working'
 import Services from '../components/fontend/Services'
 import AboutSection from '../components/fontend/AboutSection'
