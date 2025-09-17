@@ -14,18 +14,35 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $aminRole = Role::firstorCreate([
-            'name' => 'mokaddes_admin',
-            'email' => 'mokaddes.ru2000@gmail.com',
-        ]);
 
        User::firstOrCreate([
-            'name' => 'Mokaddes Ali',
-            'email' => 'mokaddes.ru2000@gmail.com',
-            'password' => bcrypt('Alina@20040mokaddes'),
-            'role_id' => $aminRole->id,
+            'name' => 'Manager',
+            'email' => 'manager@gmail.com',
+            'tenant_id' => 1,
+            'password' => bcrypt('12345678'),
+            'role' => "manager",
             'email_verified_at' => now(),
+            "is_active" => true,
+       ]);
 
+        User::firstOrCreate([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'tenant_id' => 2,
+            'password' => bcrypt('12345678'),
+            'role' => "admin",
+            'email_verified_at' => now(),
+            "is_active" => true,
+        ]);
+
+         User::firstOrCreate([
+            'name' => 'User',
+            'email' => 'user@gmail.com',
+            'tenant_id' => 0,
+            'password' => bcrypt('12345678'),
+            'role' => "manager",
+            'email_verified_at' => now(),
+            "is_active" => true,
         ]);
     }
 }
